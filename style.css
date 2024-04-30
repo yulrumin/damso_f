@@ -1,0 +1,425 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  position: relative;
+  margin: 0;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: "LOTTERIA DDAG-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/LOTTERIADDAG.woff2") format("woff2");
+}
+@font-face {
+  font-family: "HakgyoansimExt Wooju-R";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimWoojuR.woff2") format("woff2");
+}
+@font-face {
+  font-family: "HakgyoansimExt Wooju-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimWoojuR.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Hakgyoansim Wooju-R";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimWoojuR.woff2") format("woff2");
+}
+.nav {
+  position: fixed;
+  top: 0; /* 페이지의 맨 위에 위치하도록 설정 */
+  left: 0; /* 페이지의 왼쪽 가장자리에 위치하도록 설정 */
+  width: 100%; /* 전체 너비로 설정하여 상단 바처럼 만듦 */
+  font-family: "LOTTERIA DDAG-Regular";
+  font-size: 36px;
+  background-color: rgba(9, 229, 255, 0.5); /* 50% 투명도로 반투명 색상 적용 */
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px); /* 뒤에 있는 요소들에 10px의 블러 효과 적용 */
+  z-index: 2;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.wrap1 {
+  width: 1200px;
+  margin: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.menu li {
+  list-style-type: none;
+}
+
+.menu li a {
+  display: block;
+  padding: 40px 20px;
+  text-decoration: none;
+  -webkit-text-stroke: 1px #fff400;
+  color: #FF0087;
+}
+
+.menu li a:hover {
+  color: #094EFF;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 5px;
+}
+
+.rectangle {
+  position: absolute;
+  width: 100%;
+  height: 1571px;
+  top: 0;
+  background: linear-gradient(180deg, rgb(9, 229, 255) 0%, rgb(255, 255, 255) 100%);
+  background-size: cover;
+  bottom: 0;
+  z-index: -1;
+}
+
+.rectangle-2 {
+  position: absolute;
+  width: 100%;
+  height: 120px;
+  top: 120px;
+  background-color: #ffffff;
+}
+
+.p {
+  position: absolute;
+  top: 147px;
+  font-family: "Hakgyoansim Wooju-R", Helvetica;
+  color: #000000;
+  font-size: 64px;
+  white-space: nowrap;
+  font-weight: 400;
+  overflow: hidden;
+  animation: slideRightToLeft 15s linear infinite;
+}
+
+@keyframes slideRightToLeft {
+  from {
+    transform: translateX(100vw); /* 뷰포트 너비만큼 오른쪽에서 시작 */
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.title {
+  max-width: 756px;
+  top: 255px;
+  margin: 15px auto;
+  padding: 0;
+  align-content: center;
+  -webkit-text-stroke: 3px #f7ff83;
+  background: linear-gradient(180deg, rgb(253, 124, 42) 0%, rgb(233, 38, 141) 100%);
+  -webkit-background-clip: text !important;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "LOTTERIA DDAG-Regular", Helvetica;
+  font-weight: 400;
+  color: transparent;
+  font-size: 200px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.title-1 {
+  max-width: 513px;
+  top: 270px;
+  margin: 15px auto;
+  padding: 0;
+  align-content: center;
+  font-family: "HakgyoansimExt Wooju-R", Helvetica;
+  color: #e9268d;
+  font-size: 64px;
+  white-space: nowrap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.title-2 {
+  max-width: 685px;
+  top: 362px;
+  margin: 15px auto;
+  padding: 0;
+  align-content: center;
+  color: #FF0087;
+  text-align: center;
+  font-family: "HakgyoansimExt Wooju-R";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 45px;
+}
+
+.group-2 {
+  position: absolute;
+  width: 656px;
+  height: 668px;
+  top: 255px;
+  left: 1118px;
+  animation: scaleUpDown 2s infinite alternate ease-in-out;
+  transform-origin: center;
+}
+
+@keyframes scaleUpDown {
+  0%, 100% {
+    transform: scale(1); /* 원래 크기 */
+  }
+  50% {
+    transform: scale(1.2); /* 확대된 크기 */
+  }
+}
+.text-wrapper-12 {
+  position: absolute;
+  width: 208px;
+  top: 544px;
+  left: 1355px;
+  transform: rotate(30deg);
+  font-family: "LOTTERIA DDAG-Regular", Helvetica;
+  color: #000000;
+  font-size: 36px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.group-3 {
+  position: absolute;
+  width: 656px;
+  height: 668px;
+  top: 1295px;
+  left: -46px;
+  animation: scaleUpDown 2s infinite alternate ease-in-out;
+  transform-origin: center;
+  z-index: 1;
+}
+
+@keyframes scaleUpDown {
+  0%, 100% {
+    transform: scale(1); /* 원래 크기 */
+  }
+  50% {
+    transform: scale(1.2); /* 확대된 크기 */
+  }
+}
+.text-wrapper {
+  position: absolute;
+  width: 208px;
+  top: 1565px;
+  left: 190px;
+  transform: rotate(-30deg);
+  font-family: "LOTTERIA DDAG-Regular", Helvetica;
+  color: #000000;
+  font-size: 36px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  z-index: 1;
+}
+
+.image-from-rawpixel {
+  position: absolute;
+  width: 646px;
+  height: 431px;
+  top: 700px;
+  left: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  transition: transform 3s ease; /* 부드러운 전환 효과 */
+}
+
+.image-from-rawpixel:hover {
+  animation: shake 1s; /* 호버 시 애니메이션 실행 */
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+.pngegg {
+  position: absolute;
+  width: 502px;
+  height: auto;
+  top: 890px;
+  left: 1302px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 3s ease; /* 부드러운 전환 효과 */
+}
+
+.pngegg:hover {
+  animation: shake 1s; /* 호버 시 애니메이션 실행 */
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+.img {
+  position: absolute;
+  width: 470px;
+  height: auto;
+  top: 1100px;
+  left: 1152px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 3s ease; /* 부드러운 전환 효과 */
+}
+
+.img:hover {
+  animation: shake 1s; /* 호버 시 애니메이션 실행 */
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+.group {
+  position: absolute;
+  width: 657px;
+  height: auto;
+  top: 1165px;
+  left: 129px;
+  transition: transform 3s ease; /* 부드러운 전환 효과 */
+}
+
+.group:hover {
+  animation: shake 1s; /* 호버 시 애니메이션 실행 */
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+.text-wrapper-2 {
+  max-width: 1532px;
+  margin: 15px auto;
+  padding: 0;
+  align-content: center;
+  position: absolute;
+  width: 1532px;
+  top: 1818px;
+  left: 144px;
+  font-family: "LOTTERIA DDAG-Regular", Helvetica;
+  color: #d3d3d3;
+  font-size: 120px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+li {
+  list-style-type: none;
+}
+
+.bar {
+  top: 1500px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bar ul.image li:nth-child(2) img {
+  position: relative;
+  transform: translateY(100px);
+}
+
+.bar ul.image li:nth-child(3) img {
+  position: relative;
+  transform: translateY(50px);
+}
+
+.bar ul.image li:nth-child(5) img {
+  position: relative;
+  transform: translateY(100px);
+}
+
+.bar ul.image li {
+  position: relative;
+  /* 이미지 컨테이너 스타일링 */
+}
+
+.bar ul.image li img {
+  width: 100%;
+  height: auto;
+  /* 이미지 스타일링 */
+}
+
+.bar ul.image li img {
+  transition: filter 0.5s ease; /* 부드러운 필터 전환 효과 */
+  filter: brightness(30%); /* 이미지를 기본적으로 어둡게 설정 */
+}
+
+.bar ul.image li img:hover {
+  filter: brightness(100%); /* 이미지가 마우스를 올려놓으면 원래 밝기로 전환 */
+}
+
+.image-text {
+  position: absolute;
+  bottom: 10px; /* 이미지 하단에서부터의 거리 */
+  left: 50%; /* 부모 요소의 왼쪽에서 50%의 위치에 배치 */
+  transform: translateX(-50%); /* 자기 자신의 너비의 50%만큼 왼쪽으로 이동 */
+  font-family: "LOTTERIA DDAG-Regular", Helvetica;
+  font-size: 32px;
+  color: white;
+  text-align: center; /* 텍스트를 가운데 정렬 */
+  white-space: nowrap; /* 텍스트가 줄바꿈되지 않도록 설정 */
+}
+
+.bar ul.image li:nth-child(1) .image-text {
+  bottom: 88px; /* 첫 번째 이미지의 텍스트 위치 */
+}
+
+.bar ul.image li:nth-child(2) .image-text {
+  bottom: -12px; /* 두 번째 이미지의 텍스트 위치 */
+}
+
+.bar ul.image li:nth-child(3) .image-text {
+  bottom: 38px; /* 세 번째 이미지의 텍스트 위치 */
+}
+
+.bar ul.image li:nth-child(4) .image-text {
+  bottom: 88px; /* 세 번째 이미지의 텍스트 위치 */
+}
+
+.bar ul.image li:nth-child(5) .image-text {
+  bottom: -12px; /* 세 번째 이미지의 텍스트 위치 */
+}/*# sourceMappingURL=style.css.map */
